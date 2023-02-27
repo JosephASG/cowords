@@ -4,8 +4,8 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="Cowords | Contador de palabras online gratis by Mashcode">
-	<main class="px-8 max-[661]:px-2 w-vw min-h-vh flex justify-center items-start py-10">
-		<div class="w-full">
+	<main class="py-6">
+		<section class="px-8 max-[661]:px-2 w-vw min-h-vh flex justify-center items-start py-10">
 			<div class="w-full flex justify-center items-start max-xl:flex-col">
 				<div class="w-full flex justify-center items-start flex-col max-xl:items-center">
 					<textarea id="texto" oninput="contar()" class="bg-[#1f222b] resize-y w-full p-5 theme-toggle rounded-xl h-96 border text-white shadow-xl focus:outline-none focus:border-[#ffc212] focus:ring-[#ffc212]focus:ring-1" placeholder="Ingresa el texto aquí"></textarea>
@@ -54,7 +54,44 @@ import Card from '../components/Card.astro';
 				</ul>
 				</div>
 			</div>
-		</div>
+		</section>
+		<section class="p-8 w-vw min-h-vh flex justify-center items-center max-xl:p-3">
+			<div class="flex justify-center items-center flex-col p-10 max-xl:p-2 bg-[#1f222b] rounded-3xl bg-opacity-80 backdrop-filter backdrop-blur-sm">
+			<img src="https://res.cloudinary.com/primalappsje/image/upload/v1677533496/primal/cowords/cowords-on-action_riqwgl.png" class=" w-80 my-24 max-xl:w-60 max-xl:my-20" alt="Cowords in action">
+			<img src="https://res.cloudinary.com/primalappsje/image/upload/v1677529262/primal/logos/logo-cowords_ubn9ju.png"
+                alt="Cowords Logo | Contador de palabras online gratis by Mashcode" title="Cowords" class=" w-10 mb-5">
+			<h1 class="text-white text-3xl max-xl:text-lg max-xl:text-center">Cowords | Contador de palabras online gratis <span>by  </span>
+                <span class='text-[#b0b0b0] mx-0'>M</span>
+                <span class='text-[#40B5F5] mx-0'>a</span>
+                <span class='text-[#b0b0b0] mx-0'>s</span>
+                <span class='text-[#DF5990] mx-0'>h</span>
+                <span class='text-[#b0b0b0] mx-0'>c</span>
+                <span class='text-[#F5C700] mx-0'>o</span>
+                <span class='text-[#b0b0b0] mx-0'>d</span>
+                <span class='text-[#E4363D] mx-0'>e</span></h1>
+			 <div class="flex justify-center items-center px-10 max-xl:px-0 mb-24 max-xl:flex-col">
+				<p class="text-white m-10 bg-[#2e2d33] p-8 rounded-3xl max-xl:m-4 max-xl:text-center shadow-2xl">
+				Cowords es una herramienta de conteo de palabras en línea gratuita que te permite contar el número de palabras, caracteres, párrafos y más en tus textos de manera rápida y fácil. Con Cowords, podrás obtener estadísticas de lectura precisas y mejorar tu escritura para que tus textos sean más efectivos y atractivos para tu audiencia.
+			 </p>
+			 <p class="text-white m-10 bg-[#2e2d33] p-8 rounded-3xl max-xl:m-4 max-xl:text-center shadow-2xl">
+				Nuestro contador de palabras es ideal para estudiantes, escritores, periodistas, bloggers y cualquier persona que necesite contar las palabras en sus textos. Pruébalo hoy mismo y mejora tu escritura con Cowords, la mejor herramienta de conteo de palabras, caracteres y párrafos en línea.
+			 </p>
+			 </div>
+			</div>
+		</section>
+		<section class="p-8 w-vw min-h-vh flex justify-center items-center max-xl:p-3">
+			<div class="flex justify-center items-center max-xl:flex-col p-10 max-xl:p-2 bg-[#1f222b] rounded-3xl bg-opacity-80 backdrop-filter backdrop-blur-sm">
+				<img src="https://res.cloudinary.com/primalappsje/image/upload/v1677535819/primal/cowords/cowords-how-to-use_vmbhnn.png" class=" w-60 my-24 max-xl:w-40 max-xl:my-20" alt="Config - Instrucciones de como usar Cowords">
+				<div class="flex justify-center items-start px-10 max-xl:px-0 flex-col max-xl:items-center">
+					<h1 class="text-white text-3xl max-xl:text-lg max-xl:text-center">¿Cómo utilizar el contador de palabras Cowords?</h1>
+					<div class="flex justify-center items-center px-10 max-xl:px-0 max-xl:flex-col max-xl:flex-wrap">
+						<p class="text-white m-10 bg-[#2e2d33] p-8 rounded-3xl max-xl:m-4 max-xl:text-center shadow-2xl">Para contar palabras, caracteres, párrafos y más con Cowords, simplemente debes copiar y pegar el texto que deseas analizar en la herramienta.</p>
+				<p class="text-white m-10 bg-[#2e2d33] p-8 rounded-3xl max-xl:m-4 max-xl:text-center shadow-2xl">Una vez que hayas pegado el texto, Cowords lo analizará de inmediato y te proporcionará estadísticas precisas sobre el número de palabras, caracteres, párrafos y otros datos relevantes. </p>
+				<p class="text-white m-10 bg-[#2e2d33] p-8 rounded-3xl max-xl:m-4 max-xl:text-center shadow-2xl">Como el análisis de frecuencia de palabras o el cálculo de tiempo de lectura, así de fácil ya puedes usar el contador de palabras Cowords ¡El conteo de caracteres es pan comido!</p>
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 </Layout>
 

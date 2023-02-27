@@ -19,7 +19,7 @@ const Header = () => {
     return (
         <header className='px-5 w-full py-4 flex justify-between items-center'>
             <div className='logo flex justify-center items-center text-white'>
-                <img src="https://res.cloudinary.com/primalappsje/image/upload/v1677529262/primal/logos/logo-cowords_ubn9ju.png" width="50" height="50" alt='' />
+                <img src="https://res.cloudinary.com/primalappsje/image/upload/v1677529262/primal/logos/logo-cowords_ubn9ju.png" width="50" height="50" alt="Cowords Logo | Contador de palabras online gratis by Mashcode" title="Cowords" />
                 <h1 className='mx-2 f-tilt text-xl'>Cowords</h1>
                 <p className='f-tilt text-xs mt-4'>
                     <span>by </span>
