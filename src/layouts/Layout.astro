@@ -1,0 +1,161 @@
+---
+import Footer from '../components/footer.astro';
+import Header from '../components/Header';
+import { SEO } from "astro-seo";
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/primalappsje/image/upload/v1677529262/primal/logos/logo-cowords_ubn9ju.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+    <meta name="description" content="Contador de palabras online gratuito que te permite contar el número de palabras, caracteres, párrafos y más en tus textos. ¡Obtén estadísticas de lectura y mejora tu escritura!">
+    <meta name="keywords" content="contador de palabras, conteo de palabras, estadísticas de lectura, mejora de escritura">
+    <meta name="author" content="mashcode studios la">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contador de Palabras - Herramienta de Conteo de Palabras en Línea Gratuita">
+    <meta property="og:description" content="Contador de palabras online gratuito que te permite contar el número de palabras, caracteres, párrafos y más en tus textos. ¡Obtén estadísticas de lectura y mejora tu escritura!">
+    <meta property="og:url" content="https://www.tusitioweb.com/contador-de-palabras">
+    <meta property="og:image" content="https://www.tusitioweb.com/imagenes/contador-de-palabras.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contador de Palabras - Herramienta de Conteo de Palabras en Línea Gratuita">
+    <meta name="twitter:description" content="Contador de palabras online gratuito que te permite contar el número de palabras, caracteres, párrafos y más en tus textos. ¡Obtén estadísticas de lectura y mejora tu escritura!">
+    <meta name="twitter:image" content="https://www.tusitioweb.com/imagenes/contador-de-palabras.png">
+    <script src="https://kit.fontawesome.com/26b28607c6.js" crossorigin="anonymous" is:inline></script>
+	</head>
+	<body class="bg-opacity-80 backdrop-filter backdrop-blur-lg">
+		<Header client:load />
+		<slot />
+    <Footer/>
+	</body>
+</html>
+<style is:global>
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Tilt+Neon&display=swap');
+
+	body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  transition: all 0.25s;
+}
+
+body {
+  scroll-behavior: smooth;
+  background-image: url("https://res.cloudinary.com/primalappsje/image/upload/v1677519322/primal/backgrounds/bg-2_e4ccti.jpg");
+  background-position: center;
+/*   background-repeat: no-repeat; */
+  background-size: cover;
+  height: auto;
+}
+	/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.slider:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  content: "";
+  height: 24px;
+  width: 24px;
+  margin: auto 0;
+  transition: 0.5s;
+  background: url('https://res.cloudinary.com/primalappsje/image/upload/v1672839801/primal/sun_baowht.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+input:checked+.slider:before {
+  background: url('https://res.cloudinary.com/primalappsje/image/upload/v1672840406/primal/moon_m5amqg.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+/* fonts */
+
+.f-play {
+  font-family: 'Play', sans-serif;
+}
+
+.f-tilt {
+  font-family: 'Tilt Neon', cursive;
+}
+
+/* height / width */
+.min-h-vh{
+	min-height: 100vh;
+}
+.h-vh {
+  height: 100vh;
+}
+
+.w-vw {
+  width: 100vw;
+}
+
+textarea::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+textarea::-webkit-scrollbar-track {
+  display: none;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #888;
+   border-radius: 5px;
+   
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #1f222b;
+   border-radius: 5px;
+   box-shadow: 10px 1px 10px rgba(255, 255, 255, 0.5);
+}
+</style>
