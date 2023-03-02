@@ -43,14 +43,14 @@ export default function Cowords() {
     var tiempoLecturaMinutos = Math.ceil(cantidadPalabras / 200);
     var porcentajePalabrasLargas = (cantidadPalabrasLargas / cantidadPalabras) * 100;
 
-    for (var i = 0; i < palabras.length; i++) {
-      cantidadSyllables += contarSyllables(palabras[i]);
-    }
+    // for (var i = 0; i < palabras.length; i++) {
+    //   cantidadSyllables += contarSyllables(palabras[i]);
+    // }
 
     // Calcular la legibilidad utilizando la fórmula de Flesch-Kincaid
-    var legibilidad = 206.835 - 1.015 * (cantidadPalabras / cantidadOraciones) - 84.6 * (cantidadSyllables / cantidadPalabras);
+    // var legibilidad = 206.835 - 1.015 * (cantidadPalabras / cantidadOraciones) - 84.6 * (cantidadSyllables / cantidadPalabras);
     
-    document.getElementById("legibilidad").innerHTML =  legibilidad.toFixed(2);
+    // document.getElementById("legibilidad").innerHTML =  legibilidad.toFixed(2);
 
     document.getElementById("cantidad-palabras").textContent =
       cantidadPalabras;
@@ -68,16 +68,16 @@ export default function Cowords() {
     document.getElementById("palabras-largas").textContent =
     porcentajePalabrasLargas.toFixed(2) + "%";
   }
-  function contarSyllables(palabra) {
-    palabra = palabra.toLowerCase();
-    if (palabra.length <= 3) { return 1; }
-    palabra = palabra.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
-    palabra = palabra.replace(/^y/, '');
-    return palabra.match(/[aeiouy]{1,2}/g).length;
-  }
+  // function contarSyllables(palabra) {
+  //   palabra = palabra.toLowerCase();
+  //   if (palabra.length <= 3) { return 1; }
+  //   palabra = palabra.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
+  //   palabra = palabra.replace(/^y/, '');
+  //   return palabra.match(/[aeiouy]{1,2}/g).length;
+  // }
 
   function delete_fields(){
-    document.getElementById("legibilidad").innerHTML =  ""
+    // document.getElementById("legibilidad").innerHTML =  ""
     document.getElementById("texto").value =  ""
     document.getElementById("cantidad-palabras").textContent = ""
     document.getElementById("cantidad-caracteres-con-espacios").textContent = ""
@@ -128,10 +128,10 @@ return (
 						<span class="border-b border-zinc-500 py-2 px-4 text-center ">Porcentaje de palabras largas (7 letras o más) </span> 
 						<span class="py-3 px-2 text-center text-lg" id="palabras-largas"></span>
 					</li>
-					<li class=" w-auto m-2 p-2 bg-[#1f222b] flex flex-col max-w-6xl overflow-hidden bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg shadow-2xl text-white">
+					{/* <li class=" w-auto m-2 p-2 bg-[#1f222b] flex flex-col max-w-6xl overflow-hidden bg-opacity-80 backdrop-filter backdrop-blur-sm rounded-lg shadow-2xl text-white">
 						<span class="border-b border-zinc-500 py-2 px-4 text-center ">Nivel de legibilidad </span> 
 						<span class="py-3 px-2 text-center text-lg" id="legibilidad"></span>
-					</li>
+					</li> */}
 					<li class=" w-full m-2 p-2 bg-[#1f222b] flex flex-col rounded-lg text-white">
 						<span class="border-b border-zinc-500 py-2 px-4 text-center text-white">Palabras repetidas: </span> 
 					<div id="palabras-repetidas" class="p-5 bg-[#1f222b] rounded-xl text-white" aria-placeholder="Palabras repetidas"></div>
