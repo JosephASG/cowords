@@ -23,14 +23,15 @@ const Header = () => {
                 <h1 className='mx-2 f-tilt text-xl'>Cowords</h1>
                 <p className='f-tilt text-xs mt-4'>
                     <span>by </span>
-                <span className='text-[#b0b0b0]'>m</span>
+                    <span>Lenai Studios</span>
+                {/* <span className='text-[#b0b0b0]'>m</span>
                 <span className='text-[#40B5F5]'>a</span>
                 <span className='text-[#b0b0b0]'>s</span>
                 <span className='text-[#DF5990]'>h</span>
                 <span className='text-[#b0b0b0]'>c</span>
                 <span className='text-[#F5C700]'>o</span>
                 <span className='text-[#b0b0b0]'>d</span>
-                <span className='text-[#E4363D]'>e</span>
+                <span className='text-[#E4363D]'>e</span> */}
                 </p>
             </div>
             <div>
